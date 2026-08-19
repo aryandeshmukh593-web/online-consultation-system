@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareBridge | Online Consultation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="auth-shell">
+        <section class="brand-panel" aria-label="CareBridge introduction">
+            <div class="brand-mark"><span class="mark-cross">+</span><span>carebridge</span></div>
+            <div class="brand-copy">
+                <p class="eyebrow">Healthcare, made human</p>
+                <h1>Care that fits<br><em>your life.</em></h1>
+                <p class="intro">Connect with trusted healthcare professionals from wherever you are, whenever you need support.</p>
+            </div>
+            <div class="care-scene" aria-hidden="true">
+                <div class="sun"></div>
+                <div class="leaf leaf-one"></div>
+                <div class="leaf leaf-two"></div>
+                <div class="person person-one"><span class="head"></span><span class="body"></span></div>
+                <div class="person person-two"><span class="head"></span><span class="body"></span></div>
+                <div class="plant"><span class="stem"></span><span class="pot"></span></div>
+            </div>
+            <div class="trust-row"><span class="trust-dot"></span><span>Trusted by 12,000+ people every month</span></div>
+        </section>
+
+        <section class="form-panel">
+            <div class="form-wrap">
+                <div class="mobile-brand brand-mark"><span class="mark-cross">+</span><span>carebridge</span></div>
+                <div class="form-heading">
+                    <p class="eyebrow">Welcome back</p>
+                    <h2 id="form-title">Patient login</h2>
+                    <p id="form-subtitle">Your health journey continues here.</p>
+                </div>
+
+                <div class="role-switch" role="tablist" aria-label="Account type">
+                    <button class="role-tab active" type="button" role="tab" aria-selected="true" data-mode="patient">Patient login</button>
+                    <button class="role-tab" type="button" role="tab" aria-selected="false" data-mode="doctor">Doctor registration</button>
+                </div>
+
+                <form id="auth-form" novalidate>
+                    <div class="doctor-only" hidden>
+                        <label for="doctor-name">Full name</label>
+                        <div class="input-wrap"><span class="input-icon">◎</span><input id="doctor-name" name="doctorName" type="text" placeholder="Dr. Alex Morgan" autocomplete="name"></div>
+                    </div>
+
+                    <div class="doctor-only" hidden>
+                        <label for="speciality">Speciality</label>
+                        <div class="input-wrap"><span class="input-icon">✚</span><select id="speciality" name="speciality"><option value="">Choose your speciality</option><option>General physician</option><option>Dermatology</option><option>Paediatrics</option><option>Mental health</option><option>Nutrition</option></select></div>
+                    </div>
+
+                    <label for="email">Email address</label>
+                    <div class="input-wrap"><span class="input-icon">@</span><input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required></div>
+
+                    <label for="password">Password</label>
+                    <div class="input-wrap"><span class="input-icon">⌑</span><input id="password" name="password" type="password" placeholder="Enter your password" autocomplete="current-password" required><button class="password-toggle" type="button" aria-label="Show password">Show</button></div>
+
+                    <div class="form-options patient-only"><label class="check-label"><input type="checkbox" name="remember"><span class="checkmark"></span>Remember me</label><a href="#reset">Forgot password?</a></div>
+                    <div class="doctor-only doctor-note" hidden><span class="info-dot">i</span> We’ll review your details and email you within 1–2 business days.</div>
+
+                    <button class="submit-button" type="submit"><span id="submit-label">Log in to CareBridge</span><span class="arrow">→</span></button>
+                </form>
+
+                <p class="switch-copy" id="switch-copy">New to CareBridge? <a href="#register" id="switch-link">Create a patient account</a></p>
+                <a class="admin-link" href="doctors.html">Admin portal <span>→</span></a>
+                <p class="legal">By continuing, you agree to our <a href="#terms">Terms of service</a> and <a href="#privacy">Privacy policy</a>.</p>
+            </div>
+        </section>
+    </main>
+    <div class="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>

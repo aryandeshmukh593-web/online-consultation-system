@@ -1,0 +1,594 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap');
+:root {
+    --ink: #183b3a;
+    --muted: #738482;
+    --line: #dce8e4;
+    --paper: #fbfdfb;
+    --mint: #dff1e8;
+    --green: #1f7662;
+    --green-dark: #155748;
+    --coral: #f1846c;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: var(--ink);
+    background: #eef5f0;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.auth-shell {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: minmax(430px, 46%) 1fr;
+    overflow: hidden;
+}
+
+.brand-panel {
+    position: relative;
+    min-height: 100vh;
+    padding: 46px clamp(38px, 7vw, 104px);
+    color: #f7fff9;
+    background: #1e5c50;
+    overflow: hidden;
+}
+
+.brand-panel::after {
+    content: '';
+    position: absolute;
+    width: 650px;
+    height: 650px;
+    right: -270px;
+    bottom: -310px;
+    border: 1px solid rgba(222, 244, 232, .14);
+    border-radius: 50%;
+    box-shadow: 0 0 0 50px rgba(222, 244, 232, .045), 0 0 0 105px rgba(222, 244, 232, .04);
+}
+
+.brand-mark {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: -.8px;
+}
+
+.mark-cross {
+    display: grid;
+    place-items: center;
+    width: 27px;
+    height: 27px;
+    color: var(--green-dark);
+    background: #f7bd6e;
+    border-radius: 9px 9px 9px 2px;
+    font-size: 22px;
+    line-height: 1;
+}
+
+.brand-copy {
+    position: relative;
+    z-index: 1;
+    max-width: 460px;
+    margin-top: clamp(90px, 17vh, 180px);
+}
+
+.eyebrow {
+    margin: 0 0 19px;
+    color: var(--coral);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+}
+
+.brand-copy h1 {
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(46px, 5.2vw, 72px);
+    line-height: 1.07;
+    letter-spacing: -3.8px;
+}
+
+.brand-copy h1 em {
+    color: #f7bd6e;
+    font-style: normal;
+}
+
+.intro {
+    max-width: 350px;
+    margin: 27px 0 0;
+    color: #c6dfd4;
+    font-size: 16px;
+    line-height: 1.65;
+}
+
+.care-scene {
+    position: absolute;
+    right: 8%;
+    bottom: 11%;
+    width: 360px;
+    height: 200px;
+    opacity: .95;
+}
+
+.sun {
+    position: absolute;
+    right: 45px;
+    top: 18px;
+    width: 92px;
+    height: 92px;
+    background: #f7bd6e;
+    border-radius: 50%;
+}
+
+.leaf {
+    position: absolute;
+    background: #73aa91;
+    border-radius: 100% 0 100% 0;
+    transform: rotate(25deg);
+}
+
+.leaf-one {
+    left: 16px;
+    top: 84px;
+    width: 104px;
+    height: 47px;
+}
+
+.leaf-two {
+    left: 77px;
+    top: 50px;
+    width: 84px;
+    height: 40px;
+    transform: rotate(-28deg);
+}
+
+.person {
+    position: absolute;
+    bottom: 5px;
+    width: 92px;
+    height: 145px;
+}
+
+.person-one {
+    left: 103px;
+    transform: rotate(-3deg);
+}
+
+.person-two {
+    right: 78px;
+    transform: rotate(4deg);
+}
+
+.person .head {
+    position: absolute;
+    left: 22px;
+    top: 0;
+    width: 39px;
+    height: 42px;
+    background: #f2b18c;
+    border-radius: 48% 52% 44% 50%;
+}
+
+.person .body {
+    position: absolute;
+    left: 3px;
+    top: 37px;
+    width: 85px;
+    height: 108px;
+    background: #e97965;
+    border-radius: 43px 43px 8px 8px;
+}
+
+.person-two .body {
+    background: #e6a14c;
+}
+
+.plant {
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    width: 65px;
+    height: 115px;
+}
+
+.stem {
+    position: absolute;
+    left: 31px;
+    top: 24px;
+    width: 4px;
+    height: 70px;
+    background: #9ac5a8;
+    transform: rotate(5deg);
+}
+
+.pot {
+    position: absolute;
+    left: 14px;
+    bottom: 0;
+    width: 45px;
+    height: 35px;
+    background: #d9785f;
+    border-radius: 4px 4px 14px 14px;
+}
+
+.trust-row {
+    position: absolute;
+    z-index: 1;
+    bottom: 46px;
+    left: clamp(38px, 7vw, 104px);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #c6dfd4;
+    font-size: 12px;
+}
+
+.trust-dot {
+    width: 8px;
+    height: 8px;
+    background: #f7bd6e;
+    border-radius: 50%;
+}
+
+.form-panel {
+    display: grid;
+    place-items: center;
+    padding: 52px 7vw;
+    background: var(--paper);
+}
+
+.form-wrap {
+    width: min(100%, 430px);
+}
+
+.mobile-brand {
+    display: none;
+    color: var(--green-dark);
+}
+
+.form-heading h2 {
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 34px;
+    letter-spacing: -1.5px;
+}
+
+.form-heading>p:last-child {
+    margin: 9px 0 0;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.role-switch {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+    margin: 34px 0 30px;
+    padding: 4px;
+    background: #edf4f0;
+    border-radius: 12px;
+}
+
+.role-tab {
+    border: 0;
+    padding: 12px 8px;
+    color: #78908a;
+    background: transparent;
+    border-radius: 9px;
+    font: 600 12px 'DM Sans', sans-serif;
+    cursor: pointer;
+}
+
+.role-tab.active {
+    color: var(--green-dark);
+    background: white;
+    box-shadow: 0 2px 8px rgba(20, 72, 60, .08);
+}
+
+form {
+    display: grid;
+    gap: 10px;
+}
+
+label {
+    margin-top: 8px;
+    color: var(--ink);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.input-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    left: 15px;
+    z-index: 1;
+    color: #8aa39c;
+    font-size: 16px;
+}
+
+input,
+select {
+    width: 100%;
+    height: 50px;
+    padding: 0 15px 0 42px;
+    border: 1px solid var(--line);
+    border-radius: 9px;
+    color: var(--ink);
+    outline: none;
+    background: white;
+    font: 14px 'DM Sans', sans-serif;
+    transition: border .2s, box-shadow .2s;
+}
+
+select {
+    appearance: none;
+}
+
+input:focus,
+select:focus {
+    border-color: #6aac97;
+    box-shadow: 0 0 0 3px rgba(106, 172, 151, .15);
+}
+
+input::placeholder {
+    color: #a8b7b3;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 10px;
+    border: 0;
+    color: var(--green);
+    background: transparent;
+    font: 700 11px 'DM Sans', sans-serif;
+    cursor: pointer;
+}
+
+.form-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 8px 0 17px;
+    font-size: 12px;
+}
+
+a {
+    color: var(--green);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.check-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.check-label input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.checkmark {
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    background: #fff;
+}
+
+.check-label input:checked+.checkmark {
+    border-color: var(--green);
+    background: var(--green);
+    box-shadow: inset 0 0 0 3px #fff;
+}
+
+.submit-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 53px;
+    padding: 0 17px 0 20px;
+    border: 0;
+    border-radius: 9px;
+    color: white;
+    background: var(--green);
+    font: 700 13px 'DM Sans', sans-serif;
+    cursor: pointer;
+    transition: background .2s, transform .2s;
+}
+
+.submit-button:hover {
+    background: var(--green-dark);
+    transform: translateY(-1px);
+}
+
+.arrow {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.switch-copy {
+    margin: 26px 0 0;
+    color: var(--muted);
+    text-align: center;
+    font-size: 12px;
+}
+
+.admin-link {
+    display: block;
+    margin-top: 20px;
+    color: var(--green-dark);
+    text-align: center;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.admin-link span {
+    margin-left: 4px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.legal {
+    margin: 66px 0 0;
+    color: #9aa9a5;
+    text-align: center;
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+.legal a {
+    color: #718c84;
+}
+
+.doctor-only {
+    animation: reveal .25s ease both;
+}
+
+.doctor-note {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    margin: 8px 0 14px;
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.45;
+}
+
+.info-dot {
+    flex: 0 0 auto;
+    display: grid;
+    place-items: center;
+    width: 16px;
+    height: 16px;
+    color: var(--green);
+    background: var(--mint);
+    border-radius: 50%;
+    font-weight: 700;
+}
+
+.toast {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    padding: 13px 17px;
+    color: white;
+    background: var(--green-dark);
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(20, 72, 60, .2);
+    font-size: 13px;
+    opacity: 0;
+    transform: translateY(12px);
+    pointer-events: none;
+    transition: .25s;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 980px) {
+    .auth-shell {
+        display: block;
+    }
+    .brand-panel {
+        min-height: 320px;
+        padding: 28px 26px;
+    }
+    .brand-copy {
+        margin-top: 46px;
+    }
+    .brand-copy h1 {
+        font-size: 42px;
+        letter-spacing: -2.3px;
+    }
+    .intro,
+    .care-scene,
+    .trust-row {
+        display: none;
+    }
+    .form-panel {
+        min-height: calc(100vh - 320px);
+        padding: 40px 26px 32px;
+    }
+}
+
+@media (max-width: 600px) {
+    .brand-panel {
+        min-height: 250px;
+    }
+    .brand-copy {
+        margin-top: 39px;
+    }
+    .brand-copy h1 {
+        font-size: 37px;
+    }
+    .form-panel {
+        min-height: calc(100vh - 250px);
+        padding: 34px 18px 28px;
+    }
+    .mobile-brand {
+        display: none;
+    }
+    .legal {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 380px) {
+    .brand-panel {
+        min-height: 230px;
+        padding-inline: 20px;
+    }
+    .brand-copy {
+        margin-top: 34px;
+    }
+    .brand-copy h1 {
+        font-size: 33px;
+    }
+    .form-panel {
+        min-height: calc(100vh - 230px);
+        padding-inline: 14px;
+    }
+    .role-tab {
+        font-size: 11px;
+    }
+}

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareBridge | Doctor Directory</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="directory.css">
+</head>
+
+<body>
+    <main class="directory-shell">
+        <section class="admin-gate" id="admin-gate">
+            <a class="back-link" href="index.html">← Back to login</a>
+            <div class="gate-card">
+                <div class="brand-mark"><span class="mark-cross">+</span><span>carebridge</span></div>
+                <div class="gate-heading">
+                    <p class="eyebrow">Admin workspace</p>
+                    <h1>Doctor directory</h1>
+                    <p>Sign in to review registered doctors and consultation details.</p>
+                </div>
+                <div class="demo-access"><span class="demo-label">Demo account</span><strong>admin@carebridge.test</strong><span>Password: <strong>Admin@123</strong></span></div>
+                <form id="admin-form" class="admin-form" novalidate>
+                    <label for="admin-email">Admin email</label>
+                    <input id="admin-email" type="email" placeholder="admin@carebridge.test" required>
+                    <label for="admin-password">Password</label>
+                    <div class="password-field"><input id="admin-password" type="password" placeholder="Enter admin password" required><button id="toggle-admin-password" type="button">Show</button></div>
+                    <p class="login-error" id="login-error" role="alert"></p>
+                    <button class="primary-button" type="submit">Open doctor directory <span>→</span></button>
+                </form>
+            </div>
+        </section>
+
+        <section class="directory-page" id="directory-page" hidden>
+            <header class="topbar">
+                <div class="topbar-left"><a class="brand-mark" href="index.html"><span class="mark-cross">+</span><span>carebridge</span></a><a class="directory-back" href="index.html">← Back</a></div>
+                <div class="admin-tools"><span class="admin-status"><i></i> Admin view</span><button id="logout-button" class="logout-button" type="button">Log out</button></div>
+            </header>
+            <div class="directory-content">
+                <div class="page-intro">
+                    <div>
+                        <p class="eyebrow">CareBridge administration</p>
+                        <h1>Doctor directory</h1>
+                        <p>Review your available specialists and their consultation rates.</p>
+                    </div>
+                    <div class="directory-count"><strong>6</strong><span>active doctors</span></div>
+                </div>
+                <div class="directory-toolbar"><label class="search-box"><span>⌕</span><input id="doctor-search" type="search" placeholder="Search by doctor or speciality" aria-label="Search doctors"></label><select id="speciality-filter" aria-label="Filter by speciality"><option value="all">All specialities</option><option value="Cardiology">Cardiology</option><option value="Dermatology">Dermatology</option><option value="Paediatrics">Paediatrics</option><option value="Mental health">Mental health</option><option value="General medicine">General medicine</option></select></div>
+                <div class="doctor-grid" id="doctor-grid"></div>
+                <p class="empty-state" id="empty-state" hidden>No doctors match your search.</p>
+            </div>
+        </section>
+    </main>
+    <script src="doctors.js"></script>
+</body>
+
+</html>
